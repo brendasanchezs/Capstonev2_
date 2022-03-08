@@ -61,7 +61,7 @@ SPARK_STEPS = [
 ]
 
 JOB_FLOW_OVERRIDES = {
-    "Name": "Movie review classifier",
+    "Name": "Movie",
     "ReleaseLabel": "emr-5.29.0",
     "Applications": [{"Name": "Hadoop"}, {"Name": "Spark"}],
     "Configurations": [
