@@ -186,6 +186,6 @@ terminate_emr_cluster = EmrTerminateJobFlowOperator(
 
 end_data_pipeline = DummyOperator(task_id="end_data_pipeline", dag=dag)
 
-start_data_pipeline >> [data_to_s3, script_to_s3] >> create_emr_cluster
+start_data_pipeline >> create_emr_cluster
 create_emr_cluster >> step_adder >> step_checker >> terminate_emr_cluster
 terminate_emr_cluster >> end_data_pipeline
